@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 import { TSFilebasedRouter } from "@devwareng/vanilla-ts";
+import { checker } from "vite-plugin-checker"
 
 export default defineConfig(({ command }) => {
     const isBuild = command === "build";
@@ -10,6 +11,7 @@ export default defineConfig(({ command }) => {
     return {
         plugins: [
             tailwindcss(),
+            checker({ typescript: true }),
             ...(isNode ? [TSFilebasedRouter()] : []), // ✅ only add router in Node
         ],
         resolve: {
