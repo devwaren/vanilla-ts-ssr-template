@@ -1,5 +1,18 @@
 # Vanilla TypeScript Single Page Application (SSR)
 
+## Main Features
+
+- Single Page Application (SSR)
+- TypeScript
+- Vite
+- TailwindCSS
+- File Based Routing Pages
+- Reusable Components
+- Dynamic Metadata
+- Dynamic HTML Elements
+- React like syntax
+- Vercel Deploy Ready
+
 This is a single page application (SSR) built with [Vanilla TS](https://github.com/devwareng/vanilla-ts).
 
 It uses [Vite](https://vitejs.dev/) and [TailwindCSS](https://tailwindcss.com/).
