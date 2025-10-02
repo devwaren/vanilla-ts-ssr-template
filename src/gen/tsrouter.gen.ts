@@ -4,15 +4,11 @@ import { html, useTSElements } from "@devwareng/vanilla-ts"
 import Index from "../pages/index";
 
 export function NotFound(DOM: HTMLElement) {
-  return useTSElements(DOM, html`<div class="animate__animated animate__fadeIn duration-300 p-4">
-  <h1>404 - Page Not Found</h1>
-</div>`)
+  return useTSElements(DOM, html`<div class="animate__animated animate__fadeIn duration-300 p-4"><h1>404 - Page Not Found</h1></div>`)
 }
 
 export function RootDocument(DOM: HTMLElement) {
-  return useTSElements(DOM, html`<div>
-  <h1>Root</h1>
-</div>`)
+  return useTSElements(DOM, html`<div><h1>Root</h1></div>`)
 }
 
 export const routeTree = [
