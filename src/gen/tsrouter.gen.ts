@@ -1,19 +1,21 @@
 // AUTO-GENERATED FILE. DO NOT EDIT MANUALLY.
 import { html, useTSElements } from "@devwareng/vanilla-ts"
 
-import About from "../pages/about";
 import Index from "../pages/index";
 
 export function NotFound(DOM: HTMLElement) {
-  return useTSElements(DOM, html`<div class="animate__animated animate__fadeIn duration-300 p-4"><h1>404 - Page Not Found</h1></div>`)
+  return useTSElements(DOM, html`<div class="animate__animated animate__fadeIn duration-300 p-4">
+  <h1>404 - Page Not Found</h1>
+</div>`)
 }
 
 export function RootDocument(DOM: HTMLElement) {
-  return useTSElements(DOM, html`<div><h1>Root</h1></div>`)
+  return useTSElements(DOM, html`<div>
+  <h1>Root</h1>
+</div>`)
 }
 
 export const routeTree = [
-  { path: "/about", name: "about", component: (DOM: HTMLElement) => About(DOM) },
   { path: "/", name: "index", component: (DOM: HTMLElement) => Index(DOM) }
 ]
 
@@ -26,10 +28,10 @@ export function createRouter(DOM: HTMLElement) {
         return "([^/]+)"
       }) + "$")
       const pathname = path.split("?")[0]
-      const match = pathname.match(regex)
+      const match = pathname?.match(regex)
       if (match) {
         const params: Record<string, string> = {}
-        keys.forEach((key, i) => (params[key] = match[i + 1]))
+        keys.forEach((key, i) => (params[key] = match[i + 1] || ""))
         return { ...route, params }
       }
     }
