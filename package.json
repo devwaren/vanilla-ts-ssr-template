@@ -1,0 +1,27 @@
+{
+  "name": "states",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build && vite build --ssr src/entry-server.ts --outDir dist/server",
+    "start": "cross-env NODE_ENV=production tsx server.ts"
+  },
+  "dependencies": {
+    "@devwareng/vanilla-ts": "^1.7.3",
+    "@tailwindcss/vite": "^4.1.14",
+    "animate.css": "^4.1.1",
+    "express": "^5.1.0",
+    "tailwindcss": "^4.1.14",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.6.2",
+    "cross-env": "^10.1.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.7"
+  }
+}
