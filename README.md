@@ -24,6 +24,8 @@ It uses [Vite](https://vitejs.dev/) and [TailwindCSS](https://tailwindcss.com/).
 3. Start the development server: `npm run dev`
 4. Open the application in your browser: `http://localhost:5173`
 
+required extension https://marketplace.visualstudio.com/items?itemName=colton.inline-html
+
 ## Deployment
 
 1. Build the application: `npm run build`
